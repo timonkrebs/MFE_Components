@@ -15,8 +15,6 @@ import { MdmfSharedModule } from "projects/mdmf-shared/src/lib/modules/mdmf-shar
     ProfileRoutingModule,
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
-    FormsModule,
-    ReactiveFormsModule,
     MdmfSharedModule,
   ],
 })
