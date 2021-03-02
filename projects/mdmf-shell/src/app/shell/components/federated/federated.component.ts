@@ -18,10 +18,10 @@ export class FederatedComponent implements OnInit {
       remoteEntry: this.remoteEntry,
       remoteName: this.remoteName,
       exposedModule: this.exposedModule,
-    }).then(profileListUserComponent => {
-      console.log(profileListUserComponent)
-      const componentFactory = this.cfr.resolveComponentFactory(profileListUserComponent.ProfileModule.ɵmod.exports.find((e) => e.name === this.componentName));
-      const { instance } = this.federatedComponent.createComponent(componentFactory, null, ɵcreateInjector(profileListUserComponent.ProfileModule, this.injector));
+    }).then(federated => {
+      console.log(federated)
+      const componentFactory = this.cfr.resolveComponentFactory(federated[this.exposedModule].ɵmod.exports.find((e) => e.name === this.componentName));
+      const { instance } = this.federatedComponent.createComponent(componentFactory, null, ɵcreateInjector(federated[this.exposedModule], this.injector));
     });
   }
 }

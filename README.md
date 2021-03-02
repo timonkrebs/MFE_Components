@@ -23,9 +23,6 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 - Open the shell http://localhost:4200
 - Click the profile navigation link to load the remote Microfrontend
 
-![Shell Screenshot](shell.png)
-![Profile Screenshot](profile.png)
-
 ## Usage
 
 To enable use of Webpack 5 with the angular cli you **must** use **yarn** as your package manager, it allows you to override the webpack dependencies for the CLI.
