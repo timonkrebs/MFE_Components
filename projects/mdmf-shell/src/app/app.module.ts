@@ -10,7 +10,6 @@ import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
 import { MdmfSharedModule } from "projects/mdmf-shared/src/lib/modules/mdmf-shared.module";
 import { NgxsModule } from "@ngxs/store";
 import { UserState } from "projects/mdmf-shared/src/lib/app-state/state/user.state";
-import { ShellModule } from "./shell/shell-routing.module"
 
 export function initializeApp(
   mfService: MicrofrontendService
