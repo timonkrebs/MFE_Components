@@ -5,14 +5,14 @@
     "ng": "ng",
     "start:*": "yarn build:* & yarn start:shell & yarn start:draw",
     "start:shell": "ng serve",
-    "start:draw": "ng serve mdmf-draw",
+    "start:draw": "ng serve mfe-draw",
     "build:*": "yarn build:shared & yarn build:shell & yarn build:draw",
-    "build:shared": "ng build mdmf-shared",
-    "build:shell": "ng build mdmf-shell --prod",
-    "build:draw": "ng build mdmf-draw --prod",
-    "test": "ng test mdmf-shared & ng test mdmf-draw & ng test mdmf-shell",
+    "build:shared": "ng build mfe-shared",
+    "build:shell": "ng build mfe-shell --prod",
+    "build:draw": "ng build mfe-draw --prod",
+    "test": "ng test mfe-shared & ng test mfe-draw & ng test mfe-shell",
     "lint": "ng lint",
-    "e2e": "ng e2e mdmf-draw & ng e2e mdmf-shell"
+    "e2e": "ng e2e mfe-draw & ng e2e mfe-shell"
   },
   "private": true,
   "resolutions": {

@@ -8,7 +8,7 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 - shared library will maintain the application state.
 - shell (host) and profile (remote) can access the store, dispatch actions etc.
   - the profile:
-    - has a form to create an user, the user info is added stored in the application state (store) which is in the share module `mdmf-shared`
+    - has a form to create an user, the user info is added stored in the application state (store) which is in the share module `mfe-shared`
     - show the list of users by selecting them from the common store
   - the shell:
     - show the list of users by selecting them from the common store
@@ -18,8 +18,8 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 
 - Install packages: `yarn install`
 - Build the shared library `yarn build:shared`
-- Start the mdmf-shell: `yarn start:shell`
-- Start the Microfrontend: `yarn start:profile`
+- Start the mfe-shell: `yarn start:shell`
+- Start the Microfrontend: `yarn start:draw`
 - Open the shell http://localhost:4200
 - Click the profile navigation link to load the remote Microfrontend
 
@@ -36,11 +36,11 @@ The package.json contains the following section to override webpack to use versi
 
 ## Project Structure
 
-### Shell (mdmf-shell)
+### Shell (mfe-shell)
 
-The shell project located in: `projects/mdmf-shell` folder, its contains the shell application which is used to load remote Microfrontends using dynamic routing constructed from the Microfrontend array. The list of Microfrontends can be loaded from a config if required, but for the example it is just an hardcoded array.
+The shell project located in: `projects/mfe-shell` folder, its contains the shell application which is used to load remote Microfrontends using dynamic routing constructed from the Microfrontend array. The list of Microfrontends can be loaded from a config if required, but for the example it is just an hardcoded array.
 
-The share libraries and Angular library (`mdmf-shared`) are configured within the Module Federation config:
+The share libraries and Angular library (`mfe-shared`) are configured within the Module Federation config:
 
 ```js
   plugins: [
@@ -50,17 +50,17 @@ The share libraries and Angular library (`mdmf-shared`) are configured within th
         "@angular/common": { eager: true, singleton: true },
         "@angular/router": { eager: true, singleton: true },
         "@ngxs/store": {singleton: true, eager: true },
-        "mdmf-shared": { singleton: true, eager: true },
+        "mfe-shared": { singleton: true, eager: true },
       },
     }),
   ],
 ```
 
-The shared module (`MdmfSharedModule`) in the `mdmf-shared` should be imported as normal in the `@NgModule`
+The shared module (`mfeSharedModule`) in the `mfe-shared` should be imported as normal in the `@NgModule`
 
-### Profile Microfrontend (mdmf-profile)
+### Profile Microfrontend (mfe-profile)
 
-The profile project located in: `projects/mdmf-profile` contains a profile module with some child routes configured. The profile module is exposed as a remote module within the Module Federation config:
+The profile project located in: `projects/mfe-profile` contains a profile module with some child routes configured. The profile module is exposed as a remote module within the Module Federation config:
 
 ```js
 plugins: [
@@ -70,22 +70,22 @@ plugins: [
     filename: "remoteEntry.js",
     exposes: {
       ProfileModule:
-        "./projects/mdmf-profile/src/app/profile/profile.module.ts",
+        "./projects/mfe-profile/src/app/profile/profile.module.ts",
     },
     shared: {
       "@angular/core": { singleton: true, eager: true },
       "@angular/common": { singleton: true, eager: true },
       "@angular/router": { singleton: true, eager: true },
       "@ngxs/store": { singleton: true, eager: true },
-      "mdmf-shared": { singleton: true, eager: true },
+      "mfe-shared": { singleton: true, eager: true },
     },
   }),
 ];
 ```
 
-### Shared library (mdmf-shared)
+### Shared library (mfe-shared)
 
-- the shared library is a typical Angular library created by `ng generate library mdmf-shared`
+- the shared library is a typical Angular library created by `ng generate library mfe-shared`
 
 - it uses state management library `ngxs`
 
@@ -97,7 +97,7 @@ plugins: [
     ```
   - need to build the library first before running shell and profile projects
     ```bash
-    ng build mdmf-shared
+    ng build mfe-shared
     ```
 
 - it contains the `actions`, application `state` and common `models`

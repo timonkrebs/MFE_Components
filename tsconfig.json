@@ -13,7 +13,7 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "mdmf-shared": ["dist/mdmf-shared/mdmf-shared", "dist/mdmf-shared"]
+      "mfe-shared": ["dist/mfe-shared/mfe-shared", "dist/mfe-shared"]
     }
   }
 }
