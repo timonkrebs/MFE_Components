@@ -3,18 +3,16 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:*": "yarn build:* & yarn start:shell & yarn start:profile & yarn start:draw",
+    "start:*": "yarn build:* & yarn start:shell & yarn start:draw",
     "start:shell": "ng serve",
-    "start:profile": "ng serve mdmf-profile",
     "start:draw": "ng serve mdmf-draw",
-    "build:*": "yarn build:shared & yarn build:shell & yarn build:profile & yarn build:draw",
+    "build:*": "yarn build:shared & yarn build:shell & yarn build:draw",
     "build:shared": "ng build mdmf-shared",
     "build:shell": "ng build mdmf-shell --prod",
-    "build:profile": "ng build mdmf-profile --prod",
     "build:draw": "ng build mdmf-draw --prod",
-    "test": "ng test mdmf-shared & ng test mdmf-profile & ng test mdmf-draw & ng test mdmf-shell",
+    "test": "ng test mdmf-shared & ng test mdmf-draw & ng test mdmf-shell",
     "lint": "ng lint",
-    "e2e": "ng e2e mdmf-profile & ng e2e mdmf-draw & ng e2e mdmf-shell"
+    "e2e": "ng e2e mdmf-draw & ng e2e mdmf-shell"
   },
   "private": true,
   "resolutions": {

@@ -1,5 +1,5 @@
 import { Component, ComponentFactoryResolver, Injector, Input, OnInit, ViewChild, ViewContainerRef, ɵcreateInjector } from "@angular/core";
-import { loadRemoteModule, LoadRemoteModuleOptions } from "../../../utils/federation-utils";
+import { loadRemoteModule } from "../../../utils/federation-utils";
 @Component({
   selector: "federated-component",
   templateUrl: "./federated.component.html",

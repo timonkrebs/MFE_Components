@@ -12,7 +12,6 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       remotes: {
-        profile: "profile@http://localhost:4201/remoteEntry.js}",
         draw: "profile@http://localhost:4202/remoteEntry.js}"
       },
       shared: {
