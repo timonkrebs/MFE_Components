@@ -5,8 +5,8 @@ const WebpackBeforeBuildPlugin = require("before-build-webpack");
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:4202/",
-    uniqueName: "mfedraw",
+    publicPath: "https://flamboyant-bhaskara-04249f.netlify.app/",
+    uniqueName: "draw",
   },
   optimization: {
     runtimeChunk: false,

@@ -4,7 +4,7 @@ const DashboardPlugin = require("@module-federation/dashboard-plugin");
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:4200/",
+    publicPath: "https://naughty-mayer-ac23a9.netlify.app/",
     uniqueName: "mfeshell",
   },
   optimization: {
