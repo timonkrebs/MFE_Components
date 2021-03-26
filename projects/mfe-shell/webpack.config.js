@@ -1,5 +1,6 @@
 const webpack = require("webpack");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const DashboardPlugin = require("@module-federation/dashboard-plugin");
 
 module.exports = {
   output: {
