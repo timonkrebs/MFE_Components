@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       remotes: {
-        draw: "profile@http://localhost:4202/remoteEntry.js}"
+        draw: "draw@http://localhost:4202/remoteEntry.js"
       },
       shared: {
         "@angular/core": { eager: true, singleton: true },

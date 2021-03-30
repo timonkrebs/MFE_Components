@@ -8,8 +8,8 @@
     "start:draw": "ng serve mfe-draw",
     "build:*": "yarn build:shared & yarn build:shell & yarn build:draw",
     "build:shared": "ng build mfe-shared",
-    "build:shell": "ng build mfe-shell --prod",
-    "build:draw": "ng build mfe-draw --prod",
+    "build:shell": "ng build mfe-shell",
+    "build:draw": "ng build mfe-draw",
     "test": "ng test mfe-shared & ng test mfe-draw & ng test mfe-shell",
     "lint": "ng lint",
     "e2e": "ng e2e mfe-draw & ng e2e mfe-shell"
