@@ -7,7 +7,7 @@
   <federated-component 
     *ngIf="loadComponent"
     componentName="DrawComponent" 
-    [remoteEntry]="environment.remoteDraw"
+    [remoteEntry]="`${environment.remoteDraw}/remoteEntry.js`"
     remoteName="mfe_draw" 
     exposedModule="DrawModule">
   </federated-component>
