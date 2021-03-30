@@ -2510,6 +2510,11 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+before-build-webpack@^0.2.11:
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/before-build-webpack/-/before-build-webpack-0.2.11.tgz#ce508c92e42dfb8d398bce2eba40d211b85439da"
+  integrity sha512-xigRuKoJmla3cO/BP76CDlmkXmQFrjlHv6oS16RxmbckYTfi5I3ZBp7MnoKv+C05DqDT1pSl+znLf7pv1Vv4ew==
+
 better-assert@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/better-assert/-/better-assert-1.0.2.tgz#40866b9e1b9e0b55b481894311e68faffaebc522"

@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const DashboardPlugin = require("@module-federation/dashboard-plugin");
+const WebpackBeforeBuildPlugin = require("before-build-webpack");
 
 module.exports = {
   output: {
@@ -11,6 +12,11 @@ module.exports = {
     runtimeChunk: false,
   },
   plugins: [
+    new WebpackBeforeBuildPlugin(async function(_, callback) {
+      console.log('delay build by 60s');
+      await new Promise(r => setTimeout(r, 60000));
+      callback();
+    }),
     new ModuleFederationPlugin({
       name: "mfe-draw",
       library: { type: "var", name: "mfe_draw" },
