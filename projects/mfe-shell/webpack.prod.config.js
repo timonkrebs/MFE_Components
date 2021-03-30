@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 module.exports = {
   output: {
-    publicPath: "https://naughty-mayer-ac23a9.netlify.app",
+    publicPath: "https://naughty-mayer-ac23a9.netlify.app/",
     uniqueName: "mfeshell",
   },
   optimization: {
