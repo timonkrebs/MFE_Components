@@ -12,10 +12,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "mf-shared",
-      library: { type: "var", name: "mfe_shared" },
+      name: "mf-shell",
+      library: { type: "var", name: "mfe_shell" },
       remotes: {
-        "mf-draw": "mf-draw@http://localhost:4202/"
+        "mf-draw": "mf-draw"
       },
       shared: {
         "@angular/core": { eager: true, singleton: true },
