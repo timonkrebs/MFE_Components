@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "mfe-draw",
+      library: { type: "var", name: "mfe_draw" },
       filename: "remoteEntry.js",
       exposes: {
         DrawModule:

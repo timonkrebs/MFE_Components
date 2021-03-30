@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "mfe-shared",
+      library: { type: "var", name: "mfe_shared" },
       remotes: {
         draw: "draw@http://localhost:4202/remoteEntry.js"
       },
