@@ -4,7 +4,7 @@ const DashboardPlugin = require("@module-federation/dashboard-plugin");
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:4200/",
+    publicPath: "https://naughty-mayer-ac23a9.netlify.app/",
     uniqueName: "mfeshell",
   },
   optimization: {
@@ -12,10 +12,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "mf-shell",
+      name: "mfe-shell",
       library: { type: "var", name: "mfe_shell" },
       remotes: {
-        "mf-draw": "mf-draw"
+        "mfe-draw": "mfe-draw"
       },
       shared: {
         "@angular/core": { eager: true, singleton: true },

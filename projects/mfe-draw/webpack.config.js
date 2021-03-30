@@ -5,7 +5,7 @@ const WebpackBeforeBuildPlugin = require("before-build-webpack");
 
 module.exports = {
   output: {
-    publicPath: "http://localhost:4202/",
+    publicPath: "https://flamboyant-bhaskara-04249f.netlify.app/",
     uniqueName: "mfedraw",
   },
   optimization: {
@@ -18,7 +18,7 @@ module.exports = {
       callback();
     }),
     new ModuleFederationPlugin({
-      name: "mf-draw",
+      name: "mfe-draw",
       library: { type: "var", name: "mfe_draw" },
       filename: "remoteEntry.js",
       exposes: {
