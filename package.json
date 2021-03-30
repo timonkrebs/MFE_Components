@@ -29,6 +29,7 @@
     "@angular/platform-browser-dynamic": "11.2.6",
     "@angular/router": "11.2.6",
     "@ngxs/store": "^3.7.0",
+    "before-build-webpack": "^0.2.11",
     "bootstrap": "^4.5.3",
     "rxjs": "~6.6.6",
     "tslib": "^2.0.0",
