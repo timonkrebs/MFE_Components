@@ -12,6 +12,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
+      name: "mfe-shared",
       remotes: {
         draw: "draw@http://localhost:4202/remoteEntry.js"
       },
@@ -23,5 +24,16 @@ module.exports = {
         "mfe-shared": { singleton: true, eager: true },
       },
     }),
+    new DashboardPlugin({
+      filename: "dashboard.json",
+      dashboardURL: "http://localhost:3000/api/update",
+      metadata: {
+        source: {
+          url:
+            "https://github.com/timonkrebs/MFE_Components/tree/master/projects/mfe-shell",
+        },
+        remote: "http://localhost:4200/remoteEntry.js",
+      },
+    })
   ],
 };
