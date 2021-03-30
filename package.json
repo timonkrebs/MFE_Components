@@ -6,6 +6,7 @@
     "start:*": "yarn build:* & yarn start:shell & yarn start:draw",
     "start:shell": "ng serve",
     "start:draw": "ng serve mfe-draw",
+    "develope:draw": "ng serve mfe-shell --configuration=draw-local",
     "start:dashboard": "docker run -p 3000:3000 -it scriptedalchemy/mf-dashboard:latest",
     "build:*": "yarn build:shared & yarn build:shell & yarn build:draw",
     "build:shared": "ng build mfe-shared",

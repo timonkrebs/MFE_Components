@@ -38,7 +38,7 @@
             "extraWebpackConfig": "projects/mfe-shell/webpack.config.js"
           },
           "configurations": {
-            "draw":{
+            "draw-local": {
               "fileReplacements": [
                 {
                   "replace": "projects/mfe-shell/src/environments/environment.ts",
@@ -84,6 +84,9 @@
             "port": 4200
           },
           "configurations": {
+            "draw-local": {
+              "browserTarget": "mfe-shell:build:draw-local"
+            },
             "production": {
               "browserTarget": "mfe-shell:build:production",
               "extraWebpackConfig": "projects/mfe-shell/webpack.prod.config.js"
