@@ -13,8 +13,7 @@ module.exports = {
   },
   plugins: [
     new WebpackBeforeBuildPlugin(async function(_, callback) {
-      console.log('delay build by 60s');
-      await new Promise(r => setTimeout(r, 60000));
+      await new Promise(r => setTimeout(r, 1));
       callback();
     }),
     new ModuleFederationPlugin({
