@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { BrowserModule } from '@angular/platform-browser';
 import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
 import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
 import { ProfileRoutingModule } from "./shell-routing.module";
@@ -11,6 +12,7 @@ import { MfeSharedModule } from "projects/mfe-shared/src/lib/modules/mfe-shared.
   declarations: [HomeComponent, FederatedComponent],
   imports: [
     CommonModule,
+    BrowserModule,
     ProfileRoutingModule,
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),

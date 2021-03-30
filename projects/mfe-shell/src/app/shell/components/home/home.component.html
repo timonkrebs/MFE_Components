@@ -2,8 +2,10 @@
   <h2>Microfrontend Shell</h2>
   <p>Welcome to the Angular 11 Microfrontend demo using Webpack 5 Module Federation</p>
   <br />
+  <button *ngIf="!loadComponent" (click)="loadComponent = true">Load federated-component</button>
 
   <federated-component 
+    *ngIf="loadComponent"
     componentName="DrawComponent" 
     remoteEntry="http://localhost:4202/remoteEntry.js"
     remoteName="mfe_draw" 
