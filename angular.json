@@ -38,6 +38,14 @@
             "extraWebpackConfig": "projects/mfe-shell/webpack.config.js"
           },
           "configurations": {
+            "draw":{
+              "fileReplacements": [
+                {
+                  "replace": "projects/mfe-shell/src/environments/environment.ts",
+                  "with": "projects/mfe-shell/src/environments/environment.draw.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {

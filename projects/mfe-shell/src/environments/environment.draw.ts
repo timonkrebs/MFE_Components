@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   drawComponent: {
     componentName: "DrawComponent",
     remoteEntry: "http://localhost:4202/remoteEntry.js",
