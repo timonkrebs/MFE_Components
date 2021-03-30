@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "mfe-shared",
+      name: "mf-shared",
       library: { type: "var", name: "mfe_shared" },
       remotes: {
         "mf-draw": "mf-draw@http://localhost:4202/"
