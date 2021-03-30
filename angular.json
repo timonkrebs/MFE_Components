@@ -38,6 +38,15 @@
             "extraWebpackConfig": "projects/mfe-shell/webpack.config.js"
           },
           "configurations": {
+            "show": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mfe-shell/src/environments/environment.ts",
+                  "with": "projects/mfe-shell/src/environments/environment.prod.ts"
+                }
+              ],
+              "extraWebpackConfig": "projects/mfe-shell/webpack.prod.config.js"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -76,6 +85,10 @@
             "port": 4200
           },
           "configurations": {
+            "show":{
+              "browserTarget": "mfe-shell:build:show",
+              "extraWebpackConfig": "projects/mfe-shell/webpack.prod.config.js"
+            },
             "production": {
               "browserTarget": "mfe-shell:build:production",
               "extraWebpackConfig": "projects/mfe-shell/webpack.prod.config.js"
@@ -164,6 +177,15 @@
             "extraWebpackConfig": "projects/mfe-draw/webpack.config.js"
           },
           "configurations": {
+            "show": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mfe-draw/src/environments/environment.ts",
+                  "with": "projects/mfe-draw/src/environments/environment.prod.ts"
+                }
+              ],
+              "extraWebpackConfig": "projects/mfe-draw/webpack.prod.config.js"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -202,6 +224,10 @@
             "port": 4202
           },
           "configurations": {
+            "show":{
+              "browserTarget": "mfe-draw:build:show",
+              "extraWebpackConfig": "projects/mfe-draw/webpack.prod.config.js"
+            },
             "production": {
               "browserTarget": "mfe-draw:build:production",
               "extraWebpackConfig": "projects/mfe-draw/webpack.prod.config.js"

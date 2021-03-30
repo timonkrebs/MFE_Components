@@ -14,7 +14,7 @@ module.exports = {
       name: "mf-shell",
       library: { type: "var", name: "mfe_shell" },
       remotes: {
-        "mf-draw": "mf-draw"
+        "mf-draw": "mf-draw@https://naughty-mayer-ac23a9.netlify.app/"
       },
       shared: {
         "@angular/core": { eager: true, singleton: true },
