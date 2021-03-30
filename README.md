@@ -17,6 +17,7 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 ## Running the demo
 
 - Install packages: `yarn install`
+- start the dashboard: `start:dashboard` // Please follow instructions here to boot and run the dashboard: https://www.npmjs.com/package/@module-federation/dashboard-plugin
 - Build the shared library `yarn build:shared`
 - Start the mfe-shell: `yarn start:shell`
 - Start the Microfrontend: `yarn start:draw`
