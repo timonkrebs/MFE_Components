@@ -25,10 +25,11 @@ module.exports = {
         "@angular/router": { singleton: true, eager: true },
         "@ngxs/store": { singleton: true, eager: true },
         "mfe-shared": { singleton: true, eager: true },
-      },
+      }
     }),
     new DashboardPlugin({
       filename: "dashboard.json",
+      publishVersion: "1.0.0",
       dashboardURL: "http://localhost:3000/api/update",
       metadata: {
         source: {
@@ -36,7 +37,7 @@ module.exports = {
             "https://github.com/timonkrebs/MFE_Components/tree/master/projects/mfe-shell",
         },
         remote: "http://localhost:4202/remoteEntry.js",
-      },
+      }
     })
   ],
 };
