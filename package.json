@@ -9,8 +9,8 @@
     "start:dashboard": "docker run -p 3000:3000 -it scriptedalchemy/mf-dashboard:latest",
     "build:*": "yarn build:shared & yarn build:shell & yarn build:draw",
     "build:shared": "ng build mfe-shared",
-    "build:shell": "ng build mfe-shared & ng build mfe-shell",
-    "build:draw": "ng build mfe-shared & ng build mfe-draw",
+    "build:shell": "ng build mfe-shared & ng build mfe-draw & ng build mfe-shell",
+    "build:draw": "ng build mfe-shared & ng build mfe-draw & ng build mfe-shell",
     "test": "ng test mfe-shared & ng test mfe-draw & ng test mfe-shell",
     "lint": "ng lint",
     "e2e": "ng e2e mfe-draw & ng e2e mfe-shell"
