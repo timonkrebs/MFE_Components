@@ -5,16 +5,16 @@ const DashboardPlugin = require("@module-federation/dashboard-plugin");
 module.exports = {
   output: {
     publicPath: "http://localhost:4200/",
-    uniqueName: "shell",
+    uniqueName: "mfeshell",
   },
   optimization: {
     runtimeChunk: false,
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "mfe-shared",
+      name: "mfe-shell",
       remotes: {
-        draw: "draw@http://localhost:4202/remoteEntry.js"
+        "mfe-draw": "mfe-draw"
       },
       shared: {
         "@angular/core": { eager: true, singleton: true },
