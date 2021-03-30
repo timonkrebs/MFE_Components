@@ -32,7 +32,7 @@ module.exports = {
       metadata: {
         source: {
           url:
-            "https://github.com/timonkrebs/MFE_Components/tree/master/projects/mfe-shell",
+            "https://github.com/timonkrebs/MFE_Components/tree/master/projects/mfe-draw",
         },
         remote: "http://localhost:4202/remoteEntry.js",
       },
