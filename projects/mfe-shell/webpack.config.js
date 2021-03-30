@@ -12,7 +12,8 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "mf-shell",
+      name: "mfe-shared",
+      library: { type: "var", name: "mfe_shared" },
       remotes: {
         "mf-draw": "mf-draw@http://localhost:4202/"
       },
@@ -22,6 +23,18 @@ module.exports = {
         "@angular/router": { eager: true, singleton: true },
         "@ngxs/store": { singleton: true, eager: true },
         "mfe-shared": { singleton: true, eager: true },
+      },
+    }),
+    new DashboardPlugin({
+      filename: "dashboard.json",
+      publishVersion: "1.0.0",
+      dashboardURL: "http://localhost:3000/api/update",
+      metadata: {
+        source: {
+          url:
+            "https://github.com/timonkrebs/MFE_Components/tree/master/projects/mfe-shell",
+        },
+        remote: "http://localhost:4200/remoteEntry.js",
       },
     })
   ],
