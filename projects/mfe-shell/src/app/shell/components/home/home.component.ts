@@ -7,10 +7,14 @@ import { environment } from "../../../../../src/environments/environment";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  environment = environment;
+  remoteDrawUrl;
   loadComponent = false;
 
-  constructor() { }
+  constructor() {
+    console.log(environment)
+    this.remoteDrawUrl = `${environment.remoteDraw}/remoteEntry.js`
+  }
+
   ngOnInit(): void {
   }
 }
