@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
   loadComponent = false;
 
   constructor() {
-    console.log(environment)
     this.remoteDrawUrl = `${environment.remoteDraw}/remoteEntry.js`
   }
 

@@ -14,7 +14,6 @@ export class FederatedComponent implements OnInit {
 
   constructor(private injector: Injector, private cfr: ComponentFactoryResolver) { }
   ngOnInit(): void {
-    console.log(this.remoteEntry)
     loadRemoteModule({
       remoteEntry: this.remoteEntry,
       remoteName: this.remoteName,
