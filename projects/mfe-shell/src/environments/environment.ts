@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  remoteDraw: "http://localhost:4202/remoteEntry.js"
 };
 
 /*
