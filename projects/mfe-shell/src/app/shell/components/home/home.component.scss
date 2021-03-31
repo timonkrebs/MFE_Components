@@ -1,3 +1,13 @@
+img {
+  border-style: solid;
+  height: 100px;
+}
+
 .container {
   padding: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: 'list draw';
 }

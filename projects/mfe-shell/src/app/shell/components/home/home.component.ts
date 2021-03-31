@@ -11,7 +11,7 @@ import { environment } from "../../../../../src/environments/environment";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  @Select(ImageState.getImages) users: Observable<Image[]>;
+  @Select(ImageState.getImages) images: Observable<Image[]>;
   remoteDrawUrl;
   loadComponent = false;
 
