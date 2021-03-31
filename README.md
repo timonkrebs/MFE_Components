@@ -6,13 +6,13 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 - the project was developed based on the the example `angular11-microfrontends`
 
 - shared library will maintain the application state.
-- shell (host) and profile (remote) can access the store, dispatch actions etc.
-  - the profile:
+- shell (host) and draw (remote) can access the store, dispatch actions etc.
+  - the draw:
     - has a form to create an user, the user info is added stored in the application state (store) which is in the share module `mfe-shared`
     - show the list of users by selecting them from the common store
   - the shell:
     - show the list of users by selecting them from the common store
-  - when an user is added to the store, both shell and profile can see the changes.
+  - when an user is added to the store, both shell and draw can see the changes.
 
 ## Running the demo
 
@@ -22,7 +22,7 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 - Start the mfe-shell: `yarn start:shell`
 - Start the Microfrontend: `yarn start:draw`
 - Open the shell http://localhost:4200
-- Click the profile navigation link to load the remote Microfrontend
+- Click the button to load the remote Microfrontend
 
 ## Usage
 
