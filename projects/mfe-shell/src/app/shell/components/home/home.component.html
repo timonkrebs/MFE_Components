@@ -4,11 +4,10 @@
   <br />
   <button *ngIf="!loadComponent" (click)="loadComponent = true">Load federated-component</button>
 
-  <federated-component 
-    *ngIf="loadComponent"
-    componentName="DrawComponent" 
-    [remoteEntry]="remoteDrawUrl"
-    remoteName="mfe_draw" 
-    exposedModule="DrawModule">
-  </federated-component>
+  <div>
+    <div *ngFor="let user of users | async">1</div>
+    <federated-component *ngIf="loadComponent" componentName="DrawComponent" [remoteEntry]="remoteDrawUrl"
+      remoteName="mfe_draw" exposedModule="DrawModule">
+    </federated-component>
+  </div>
 </div>
