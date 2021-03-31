@@ -8,14 +8,14 @@ import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
 import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
 import { MfeSharedModule } from "projects/mfe-shared/src/lib/modules/mfe-shared.module";
 import { NgxsModule } from "@ngxs/store";
-import { UserState } from "projects/mfe-shared/src/lib/app-state/state/user.state";
+import { ImageState } from "projects/mfe-shared/src/lib/app-state/state/image.state";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(APP_ROUTES),
-    NgxsModule.forRoot([UserState]),
+    NgxsModule.forRoot([ImageState]),
     MfeSharedModule,
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),

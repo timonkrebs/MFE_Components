@@ -8,11 +8,11 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 - shared library will maintain the application state.
 - shell (host) and draw (remote) can access the store, dispatch actions etc.
   - the draw:
-    - has a form to create an user, the user info is added stored in the application state (store) which is in the share module `mfe-shared`
-    - show the list of users by selecting them from the common store
+    - has a form to create an image, the image info is added stored in the application state (store) which is in the share module `mfe-shared`
+    - show the list of images by selecting them from the common store
   - the shell:
-    - show the list of users by selecting them from the common store
-  - when an user is added to the store, both shell and draw can see the changes.
+    - show the list of images by selecting them from the common store
+  - when an image is added to the store, both shell and draw can see the changes.
 
 ## Running the demo
 

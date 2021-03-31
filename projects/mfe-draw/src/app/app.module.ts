@@ -7,14 +7,14 @@ import { AppComponent } from "./app.component";
 import { NgxsModule } from "@ngxs/store";
 import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
 import { NgxsLoggerPluginModule } from "@ngxs/logger-plugin";
-import { UserState } from "../../../mfe-shared/src/lib/app-state/state/user.state";
+import { ImageState } from "../../../mfe-shared/src/lib/app-state/state/image.state";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxsModule.forRoot([UserState]),
+    NgxsModule.forRoot([ImageState]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
   ],

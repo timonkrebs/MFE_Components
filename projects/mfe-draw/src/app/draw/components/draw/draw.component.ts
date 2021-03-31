@@ -1,6 +1,9 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { switchMap, takeUntil, pairwise } from 'rxjs/operators'
+import { Store } from "@ngxs/store";
+import { AddImage } from "projects/mfe-shared/src/lib/app-state/actions/image.action";
+import { Image } from "projects/mfe-shared/src/lib/app-state/models/Image";
 
 @Component({
   selector: 'app-draw',
@@ -10,6 +13,8 @@ import { switchMap, takeUntil, pairwise } from 'rxjs/operators'
 export class DrawComponent implements AfterViewInit {
   @ViewChild('draw') draw: ElementRef<HTMLCanvasElement>;
   private ctx: CanvasRenderingContext2D;
+
+  constructor(private store: Store) { }
 
   ngAfterViewInit(): void {
     const canvas: HTMLCanvasElement = this.draw.nativeElement;
@@ -22,6 +27,10 @@ export class DrawComponent implements AfterViewInit {
     this.captureEvents(canvas);
   }
 
+  save(): void {
+    this.saveImage();
+  }
+
   private loadImage = (image: string) => {
     // ToDo: Load Image
     var img = new Image();
@@ -29,12 +38,13 @@ export class DrawComponent implements AfterViewInit {
     this.ctx.drawImage(img, 0, 0, this.draw.nativeElement.clientWidth, this.draw.nativeElement.clientHeight);
   }
 
-  private save = () => {
+  private saveImage = () => {
     // ToDo: Save
     const canvas: HTMLCanvasElement = this.draw.nativeElement;
     const image = canvas.toDataURL();
+    this.store.dispatch(new AddImage({  content: image } as Image));
   }
-  
+
   private captureEvents(canvas: HTMLCanvasElement) {
     fromEvent(canvas, 'mousedown')
       .pipe(

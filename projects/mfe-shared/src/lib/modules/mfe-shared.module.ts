@@ -3,10 +3,10 @@ import { MfeSharedComponent } from "../components/mfe-shared.component";
 import { CommonModule } from "@angular/common";
 
 @NgModule({
-  // declarations: [MfeSharedComponent, ListUserComponent],
+  // declarations: [MfeSharedComponent, ListImageComponent],
   declarations: [MfeSharedComponent],
   imports: [CommonModule],
-  // exports: [MfeSharedComponent, ListUserComponent]
+  // exports: [MfeSharedComponent, ListImageComponent]
   exports: [MfeSharedComponent],
 })
 export class MfeSharedModule {}
