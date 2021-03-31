@@ -59,19 +59,19 @@ The share libraries and Angular library (`mfe-shared`) are configured within the
 
 The shared module (`mfeSharedModule`) in the `mfe-shared` should be imported as normal in the `@NgModule`
 
-### Profile Microfrontend (mfe-profile)
+### Draw Microfrontend (mfe-draw)
 
-The profile project located in: `projects/mfe-profile` contains a profile module with some child routes configured. The profile module is exposed as a remote module within the Module Federation config:
+The draw project located in: `projects/mfe-draw` contains a draw module with some child routes configured. The draw module is exposed as a remote module within the Module Federation config:
 
 ```js
 plugins: [
   new ModuleFederationPlugin({
-    name: "profile",
-    library: { type: "var", name: "profile" },
+    name: "draw",
+    library: { type: "var", name: "draw" },
     filename: "remoteEntry.js",
     exposes: {
-      ProfileModule:
-        "./projects/mfe-profile/src/app/profile/profile.module.ts",
+      DrawModule:
+        "./projects/mfe-draw/src/app/draw/draw.module.ts",
     },
     shared: {
       "@angular/core": { singleton: true, eager: true },
@@ -96,7 +96,7 @@ plugins: [
     ## for loggin and browswer devtools
     yarn add --dev @ngxs/logger-plugin @ngxs/devtools-plugin
     ```
-  - need to build the library first before running shell and profile projects
+  - need to build the library first before running shell and draw projects
     ```bash
     ng build mfe-shared
     ```
