@@ -40,7 +40,7 @@ module.exports = {
       metadata: {
         source: {
           url:
-            "https://github.com/timonkrebs/MFE_Components/tree/master/projects/mfe-draw",
+            "https://github.com/timonkrebs/MFE_Components/tree/master",
         },
         remote: "http://localhost:4202/remoteEntry.js",
       }
