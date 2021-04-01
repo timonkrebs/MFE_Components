@@ -43,6 +43,13 @@ async function lookupExposedModule<T>(
 
   await container.init(__webpack_share_scopes__.default);
   const factory = await container.get(exposedModule);
+  // just for demopurpose
+  try {
+    // @ts-ignore
+    import("mf-draw/DrawModule")
+      .then((DrawModule) => { })
+      .catch(() => console.log('only for demo'));
+  } catch { }
   const Module = factory();
   return Module as T;
 }
